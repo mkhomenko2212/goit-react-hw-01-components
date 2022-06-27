@@ -1,5 +1,18 @@
+import user from '../data/user.json';
+import Profile from './Profile/Profile';
+import Statistics from './Statistics/Statistics';
+import stats from '../data/stats.json'
+import friends from '../data/friends.json';
+import FriendList from './Friend/FriendList/FriendList';
+import TransactionsHistory from './TransactionsHistory/TransactionsHistory';
+import transactions from '../data/transactions.json'
+// import GlobalStyles from 'global';
+
+
+
+
 export const App = () => {
-  return (
+  return ( 
     <div
       style={{
         height: '100vh',
@@ -10,7 +23,18 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
-    </div>
+      <Profile
+          username={user.username}
+          tag={user.tag}
+          location={user.location}
+          avatar={user.avatar}
+          stats={user.stats}
+      />
+      <Statistics title="Upload stats" stats={stats} />
+   
+      <FriendList friends={friends} />
+      <TransactionsHistory items={transactions} />
+      </div>
+  
   );
 };
