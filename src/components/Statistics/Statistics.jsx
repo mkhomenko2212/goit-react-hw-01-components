@@ -4,7 +4,7 @@ import {Statistic, Title, StatList, Label, Percentage, Item} from './Statistics.
 
 export const Statistics = ({ title, stats }) => {
     return ( <Statistic>
-      {tittle && <Title>{title}</Title>}
+      {title && <Title>{title}</Title>}
 
      <StatList>
         {stats.map(({id, label, percentage}) => (
